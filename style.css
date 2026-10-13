@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263238;
+}
+
+/* Header */
+header {
+    background: teal;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Home */
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: #e0f2f5;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: teal;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Packages */
+#packages {
+    padding: 35px 7%;
+    text-align: center;
+}
+
+#packages h2,
+.booking h2 {
+    margin-bottom: 25px;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: teal;
+    font-weight: bold;
+}
+
+/* Booking */
+.booking {
+    background: #eaf3f7;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 15px;
+    align-items: center;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+label {
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    grid-column: 1 / 3;
+    padding: 12px;
+    background: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background: #006060;
+}
+
+/* Footer */
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: 1;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
